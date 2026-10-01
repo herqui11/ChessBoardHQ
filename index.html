@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Board Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="board-section">
+      <div id="board"></div>
+    </div>
+
+    <div id="panel">
+      <h2>Cell Board Analysis</h2>
+
+      <div id="status" class="status-normal">White to move</div>
+
+      <div id="move-input-row">
+        <input id="move-input" type="text" placeholder="e.g. e4 or e2e4" autocomplete="off" spellcheck="false">
+        <button id="move-submit">Move</button>
+      </div>
+      <div id="error-display"></div>
+
+      <div id="controls">
+        <button id="undo-btn">⟵ Undo</button>
+        <button id="flip-btn">⇅ Flip</button>
+        <button id="reset-btn">↺ Reset</button>
+      </div>
+
+      <div id="history-section">
+        <div id="history-header">Move History</div>
+        <div id="move-history"></div>
+      </div>
+
+      <div id="legend">
+        <div class="legend-item"><span class="legend-black">3</span> Black attacks (upper-left)</div>
+        <div class="legend-item"><span class="legend-white">3</span> White attacks (upper-right)</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="promotion-modal" class="hidden">
+    <div id="promotion-box">
+      <div id="promotion-title">Choose promotion piece</div>
+      <div id="promotion-choices">
+        <button class="promo-btn" data-piece="q"></button>
+        <button class="promo-btn" data-piece="r"></button>
+        <button class="promo-btn" data-piece="b"></button>
+        <button class="promo-btn" data-piece="n"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="chess.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
