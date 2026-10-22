@@ -1,5 +1,5 @@
 import { fetchAndProcessStudies } from './lichess-api.js';
-import { Chess } from 'https://cdn.jsdelivr.net/npm/chess.js@1.0.0/dist/esm/chess.js';
+import { Chess } from './chess.js';
 
 const CACHE_VERSION = 2;
 const CACHE_KEY     = 'chess-openings-cache';

@@ -1,4 +1,4 @@
-import { Chess } from 'https://cdn.jsdelivr.net/npm/chess.js@1.0.0/dist/esm/chess.js';
+import { Chess } from './chess.js';
 
 export function parseStudyPGN(pgnText, studyId) {
   const chunks = pgnText.split(/\n(?=\[Event\b)/);
