@@ -1,0 +1,5 @@
+node_modules/
+dist/
+data/traps-cache.json
+*.mp4
+_test_*.js

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Opening Traps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="titlebar">
+    <div id="title-left">
+      <span id="lichess-logo">♟</span>
+      <h1>Chess Opening Traps</h1>
+    </div>
+    <div id="title-right">
+      <span id="spinner" class="hidden">⟳</span>
+      <span id="status-text"></span>
+      <button id="refresh-btn">↺ Refresh from Lichess</button>
+    </div>
+  </header>
+
+  <div id="app">
+
+    <div id="sidebar"></div>
+
+    <div id="main">
+      <div id="filter-bar">
+        <div class="filter-group">
+          <span class="filter-label">Color:</span>
+          <button class="filter-pill active" data-filter="color" data-value="all">All</button>
+          <button class="filter-pill" data-filter="color" data-value="white">♔ White</button>
+          <button class="filter-pill" data-filter="color" data-value="black">♚ Black</button>
+        </div>
+        <span id="trap-count-label"></span>
+      </div>
+
+      <main id="panel"></main>
+    </div>
+
+  </div>
+
+  <div id="board-modal" class="modal-overlay hidden">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-row">
+          <span id="modal-trap-name"></span>
+          <span id="modal-eco" class="eco-badge"></span>
+          <span id="modal-color" class="color-badge"></span>
+          <span id="modal-level" class="level-badge"></span>
+        </div>
+        <button id="modal-close" title="Close (Esc)">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="board-wrap">
+          <div id="chess-board"></div>
+          <div id="board-controls">
+            <button id="btn-prev" title="Previous move (←)">◀ Prev</button>
+            <span id="move-counter">Start</span>
+            <button id="btn-next" title="Next move (→)">Next ▶</button>
+            <button id="btn-flip" title="Flip board (F)">⇅ Flip</button>
+          </div>
+        </div>
+        <div class="modal-info">
+          <div id="move-list"></div>
+          <div id="modal-description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
